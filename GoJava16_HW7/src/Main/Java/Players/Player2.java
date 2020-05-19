@@ -8,7 +8,7 @@ public class Player2 extends SuperPlayer {
 
     public Player2(double price) {
         this.price = new BigDecimal(price);
-        this.song = "The best song";
+        song = "The best song";
     }
 
     public BigDecimal getPrice() {

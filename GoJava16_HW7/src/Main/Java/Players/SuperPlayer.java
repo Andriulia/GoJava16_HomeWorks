@@ -1,6 +1,6 @@
 package Main.Java.Players;
 
-public class SuperPlayer {
+public abstract class SuperPlayer {
     String song;
     String[] playlist;
 
@@ -21,6 +21,4 @@ public class SuperPlayer {
             System.out.println("Playing: " + song);
         }
     }
-
-
 }
