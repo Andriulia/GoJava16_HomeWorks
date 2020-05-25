@@ -27,15 +27,15 @@ public class FlowerStore {
     public static ArrayList<Flower> sellSequence(int roses, int chamomiles, int tulips) {
         ArrayList<Flower> bouquet = new ArrayList<>();
         do {
-            if(roses != 0) {
+            if (roses != 0) {
                 bouquet.add(new Rose());
                 roses--;
             }
-            if(chamomiles != 0) {
+            if (chamomiles != 0) {
                 bouquet.add(new Chamomile());
                 chamomiles--;
             }
-            if(tulips != 0) {
+            if (tulips != 0) {
                 bouquet.add(new Tulip());
                 tulips--;
             }
@@ -52,7 +52,7 @@ public class FlowerStore {
             bouquet = sell(roses, chamomiles, tulips);
         }
         for (Flower flower : bouquet) {
-            System.out.print(flower.getName() + " ");
+            System.out.print(flower.getClass().getSimpleName() + " ");
         }
         setProfit(roses, chamomiles, tulips);
     }
@@ -62,8 +62,8 @@ public class FlowerStore {
     }
 
     private static void setProfit(int roses, int chamomiles, int tulips) {
-        profit = profit.add(BigDecimal.valueOf(roses* new Rose() .getPrice().intValue() +
-                chamomiles*new Chamomile().getPrice().intValue() +
-                tulips* new Tulip() .getPrice().intValue()));
+        profit = profit.add(BigDecimal.valueOf(roses * new Rose().getPrice().intValue() +
+                chamomiles * new Chamomile().getPrice().intValue() +
+                tulips * new Tulip().getPrice().intValue()));
     }
 }
